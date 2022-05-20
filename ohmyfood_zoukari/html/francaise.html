@@ -13,7 +13,6 @@
       name="keywords"
       content="gastronomie, menu, restaurant, gastronomique, exception"
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -35,7 +34,7 @@
   <body>
     <div class="loader"></div>
     <header>
-      <a href="/ohmyfood_zoukari/html/accueil.html">
+      <a href="/ohmyfood_zoukari/index.html">
         <div class="go_back"><i class="fa-solid fa-left-long"></i></div>
         <div class="entete">
           <img
@@ -257,20 +256,5 @@
         <p class="mentions">Contact</p>
       </div>
     </footer>
-
-    <script>
-      var page_block = document.getElementsByClassName("page_block");
-      for (i = 0; i < page_block.length; i++) {
-        var elem_over = page_block[i];
-
-        if (i < 4) {
-          elem_over.style.transition = i + "s";
-        } else {
-          elem_over.style.transition = "4s";
-        }
-
-        elem_over.classList.add("set_block");
-      }
-    </script>
   </body>
 </html>

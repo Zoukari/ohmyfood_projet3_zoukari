@@ -151,7 +151,6 @@ a{
 .row_container{
     display: flex;
     align-items: center;
-    justify-content: center;
     background-color: rgb(251, 251, 251);
     width: 25%;
     margin:auto;
@@ -162,15 +161,23 @@ a{
     /* padding: 10px; */
 }
 
+.row_container:hover {
+  color: #9356DC;
+}
+
+.mobile:before {
+    background-color: #9356DC;
+}
+
 .number{
 font-size: 18px;
-margin-right: 400px;
-position: absolute;
 background-color: #9356DC ;
 padding: 5px;
 border-radius: 50%;
-width: 2.0%;
+margin-left: -15px;
 text-align: center;
+width: 20px;
+height: 20px;
 color: white;
 }
 
@@ -181,8 +188,9 @@ color: white;
 
 .mobile{
     font-size: 20px;
-    color: rgb(75, 75, 75);
-    margin-right: 90px;
+    color: rgb(42, 39, 39);
+    margin-left: 20px;
+    margin-right: 20px;;
 }
 
 .restaurant_container{
@@ -414,6 +422,7 @@ border-radius: 19px;
     justify-content: center;
 }
 
+
 .page_block_title h3{
     position:relative
 }
@@ -517,7 +526,7 @@ border-radius: 19px;
 }
 
 .page_block{
-       opacity:0;
+    opacity:1;
     width:32%;
     cursor:pointer
 }
@@ -533,7 +542,7 @@ border-radius: 19px;
 @media only screen and (max-width:900px) {
     .page_block:hover .item_price span {
   
-        left: 68%;
+        left: 70%;
     }
     
    .set_flex {
@@ -601,6 +610,7 @@ border-radius: 19px;
   
     width: 95%;
 }
+
 
 .explorer_button {
    width: 85%;
