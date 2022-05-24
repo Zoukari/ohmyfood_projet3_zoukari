@@ -4,70 +4,58 @@ body{
 body, html {
     font-family: "Roboto", sans-serif;
 }
-.lds-heart {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-    transform: rotate(45deg);
-    transform-origin: 40px 40px;
-  }
-.lds-heart div {
-    top: 32px;
-    left: 32px;
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    background: #fcf;
-    animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-.lds-heart div:after,
-.lds-heart div:before {
-    content: " ";
-    position: absolute;
-    display: block;
-    width: 32px;
-    height: 32px;
-    background: #fcf;
-  }
-.lds-heart div:before {
-    left: -24px;
-    border-radius: 50% 0 0 50%;
-  }
-.lds-heart div:after {
-    top: -24px;
-    border-radius: 50% 50% 0 0;
-  }
-@keyframes lds-heart {
+
+
+/*Loader*/
+.loader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #FFF;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    animation: loader 3s forwards;
+}
+  
+  /*Animation loader*/
+
+@keyframes loader {
     0% {
-      transform: scale(0.95);
-    }
-    5% {
-      transform: scale(1.1);
-    }
-    39% {
-      transform: scale(0.85);
-    }
-    45% {
-      transform: scale(1);
-    }
-    60% {
-      transform: scale(0.95);
+      opacity: 1;
     }
     100% {
-      transform: scale(0.9);
+      opacity: 0;
+      z-index: -10;
     }
   }
-
-.loader{
-    border: 16px solid #f3f3f3;
-    border-top:16px solid #3498db;
+.loader__circle {
+    border: 10px solid #F3F3F3;
+    border-top: 10px solid #c89aff;
+    border-bottom: 10px solid #000000;
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-    display:none
-}
+    width: 100px;
+    height: 100px;
+    animation: spin 4s linear forwards;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  /*Animation du loader circle*/
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(360deg);
+      opacity: 0;
+    }
+  }
 
 
 body{
@@ -135,9 +123,6 @@ a{
       transform: rotate(360deg);
     }
   }
-
-
-
 
 @keyframes spin {
     0% {transform: rotate(0deg);}
@@ -369,14 +354,20 @@ color:#611d8f
     color: green;
     padding: 10px;
     font-size: 16px;
-  
+    animation: clignote 2s linear infinite;
 }
+
+@keyframes clignote {  
+    50% { opacity: 0; }
+  }
 
 .nouveau_cont{
     padding: 10px;
     float:right;
     
 }
+
+
 
 .restaurant_flex{
     display: flex;
@@ -874,9 +865,10 @@ font-weight: bold;
 
 
 .number {
-     margin-right: 0px; 
+
+
     position: absolute;
-    width: 5.2%;
+    width: 3.6%;
     left: 7px !important;
 }
 .row_container{
