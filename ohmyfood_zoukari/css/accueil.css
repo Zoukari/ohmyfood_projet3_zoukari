@@ -7,6 +7,7 @@ body, html {
 
 
 /*Loader*/
+
 .loader {
     width: 100%;
     height: 100%;
@@ -63,6 +64,12 @@ body{
   
 }
 
+/*premiere partie du site */
+
+.page_title{
+    font-family: Shrikhand;
+}
+
 a{ 
     text-decoration: none;
     color: black;
@@ -80,56 +87,6 @@ a{
     padding: 0;
   }
   
-  
-  .loader_ {
-      position:fixed;
-      background-color:white;
-      width:100%;
-      z-index:2;
-      overflow-x: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-  }
- 
-  .loading {
-    width: var(--radius);
-    height: var(--radius);
-    border-radius: 50%;
-    border: var(--ring-width) solid var(--light-color);
-  }
-  
-  .loading:before {
-    display: block;
-    position: relative;
-    left: calc(var(--ring-width) * -1);
-    top: calc(var(--ring-width) * -1);
-    content: ' ';
-    width: var(--radius);
-    height: var(--radius);
-    border-radius: 50%;
-    border: var(--ring-width) solid;
-    border-color: var(--dark-color) transparent transparent transparent;
-    animation: loading-rotate .8s ease-out infinite;
-  }
-  
-  @keyframes loading-rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-@keyframes spin {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}
-}
-
-
 .entete{
     text-align: center;
 }
@@ -357,9 +314,7 @@ color:#611d8f
     animation: clignote 2s linear infinite;
 }
 
-@keyframes clignote {  
-    50% { opacity: 0; }
-  }
+
 
 .nouveau_cont{
     padding: 10px;
@@ -367,13 +322,13 @@ color:#611d8f
     
 }
 
-
+/*cartes et footer */
 
 .restaurant_flex{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 10px;
 }
 
 .footer_container{
@@ -420,6 +375,7 @@ color:#611d8f
 .mentions{
     color: white;
     font-weight: bold;
+    margin-top: 15px;
     font-size: 14px;
 }
 
@@ -450,12 +406,19 @@ color:#611d8f
     0% {
       opacity: 0;
     }
+    50% {
+        opacity: 0.5;
+      }
     100% {
       opacity: 1;
     }
   }
   .content_block {
-    animation: fadein 5s;
+    opacity: 1;
+	animation-name: fadein;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
   }
 
 
@@ -474,6 +437,7 @@ border-radius: 19px;
 
 .flex_block_title, .item_price, .checked_ico {
     padding: 10px 20px;
+    
 }
 .flex_block p,.flex_block h3 {
     margin:6px 3px;
@@ -509,12 +473,21 @@ border-radius: 19px;
     position:relative
 }
 .page_block_title h3:after {
-    width: 53px;
-    border-bottom: solid 3px #99e2d0;
+    margin-top: 10px;
+    content: "";
+    width: 3rem;
+    height: 0.25rem;
+    background-color: #99e2d0;
     position: absolute;
     left: 0;
-    top: 110%;
-    z-index: 1;
+    bottom: 0;
+}
+
+.flex_block_title{
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .go_back{
@@ -547,7 +520,7 @@ border-radius: 19px;
     transition:0.7s;
     background-image: linear-gradient(#f591eb, #ac65db);
 }
-
+/*responsive grand écran */
 @media only screen and (min-width: 1000px) {
     .footer_container {
         background-color: rgb(85, 85, 85);
@@ -716,7 +689,7 @@ font-weight: bold;
 }
 
 
-
+/*responsive 900px */
 
 @media only screen and (min-width:900px) {
     .flex_block h3 {
@@ -801,7 +774,7 @@ font-weight: bold;
        
         margin-right: 340px;
         position: absolute;
-        width: 1.2%;
+        width: 1.6%;
       
         }
     
@@ -883,8 +856,8 @@ font-weight: bold;
 
 
     position: absolute;
-    width: 3.6%;
-    left: 7px !important;
+    width: 5.5%;
+    left: 5px !important;
 }
 .row_container{
     position:relative
