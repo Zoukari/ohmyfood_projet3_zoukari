@@ -444,6 +444,22 @@ color:#611d8f
     margin-left: 20px;
 }
 
+
+
+@keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .content_block {
+    animation: fadein 5s;
+  }
+
+
+
 .set_flex{
     display:flex;
     justify-content:flex-start;
@@ -493,7 +509,6 @@ border-radius: 19px;
     position:relative
 }
 .page_block_title h3:after {
-    content: '';
     width: 53px;
     border-bottom: solid 3px #99e2d0;
     position: absolute;
@@ -541,7 +556,7 @@ border-radius: 19px;
         justify-content: space-between;
     }
     .flex_block_title {
-        max-width: 60%;
+        max-width: 68%;
     }
  
    }
